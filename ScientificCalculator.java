@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ScientificCalculator {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         double result = 0;
 
         System.out.println("=== Simple Scientific Calculator ===");
@@ -24,7 +24,7 @@ public class ScientificCalculator {
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
 
-            int choice = scanner.nextInt();
+            int choice = sc.nextInt();
 
             if (choice == 0) {
                 System.out.println("Calculator closed.");
@@ -35,12 +35,12 @@ public class ScientificCalculator {
 
             if (choice >= 1 && choice <= 5) {
                 System.out.print("Enter first number: ");
-                num1 = scanner.nextDouble();
+                num1 = sc.nextDouble();
                 System.out.print("Enter second number: ");
-                num2 = scanner.nextDouble();
+                num2 = sc.nextDouble();
             } else if (choice >= 6 && choice <= 10) {
                 System.out.print("Enter number (in radians for trig): ");
-                num1 = scanner.nextDouble();
+                num1 = sc.nextDouble();
             }
 
             switch (choice) {
@@ -90,6 +90,6 @@ public class ScientificCalculator {
                 System.out.println("Result = " + result);
         }
 
-        scanner.close();
+        sc.close();
     }
 }
